@@ -1,5 +1,5 @@
 # ResetMACAddress
-A simple bash script to reset your MAC address
+A simple bash script to reset your MAC address for **OSX / MacOS**.
 
 ## How to use
 1) `git clone https://github.com/andrewgazelka/ResetMacAddress.git`
