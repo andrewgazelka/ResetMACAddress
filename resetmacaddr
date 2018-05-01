@@ -1,0 +1,8 @@
+if [ "$(whoami)" != "root" ]; then
+	echo "You must be root to execute this script. feelsbadman"
+	exit 1
+fi
+echo "old: `ifconfig en1 | grep ether | awk '{print $2}'`"
+mac=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+ifconfig en1 ether $mac
+echo "new: `ifconfig en1 | grep ether | awk '{print $2}'`"
